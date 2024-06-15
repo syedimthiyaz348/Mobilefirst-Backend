@@ -12,6 +12,11 @@ app.get('/',async (req,res) => {
     res.send("Hello World")    
 })
 
+app.get('/data', async (req, res) => {
+    let data = await user.find({})
+    res.send(data);
+})
+
 app.post('/login', async (req, res) => {
     let name = req.body.username;
     let userPassword = req.body.password
