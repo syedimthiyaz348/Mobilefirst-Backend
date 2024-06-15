@@ -8,8 +8,8 @@ const cors = require('cors');
 app.use(cors());
 
 app.get('/',async (req,res) => {
-    let data = await user.find({})
-    res.send(data)    
+    //let data = await user.find({})
+    res.send("Hello World")    
 })
 
 app.post('/login', async (req, res) => {
