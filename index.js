@@ -47,3 +47,6 @@ app.post('/signup',async (req, res) => {
 app.listen(3000, () => {
     console.log("Server Started")
 })
+
+
+module.exports = app
