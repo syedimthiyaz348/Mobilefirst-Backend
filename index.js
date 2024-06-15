@@ -8,8 +8,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.get('/',async (req,res) => {
-    let data = await dbConnect();
-    data = await data.find().toArray()
+    let data = await user.find({})
     res.send(data)    
 })
 
@@ -40,4 +39,6 @@ app.post('/signup',async (req, res) => {
     res.send(result)
 })
 
-app.listen(3000)
+app.listen(3000, () => {
+    console.log("Server Started")
+})
